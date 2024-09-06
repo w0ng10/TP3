@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Compra y Venta</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        table, th, td { border: 1px solid #ddd; }
+        th, td { padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .form-container { margin: 20px; }
+        .form-container input, .form-container button { margin: 5px; padding: 10px; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Agregar Producto</h2>
+        <input type="text" id="productName" placeholder="Nombre del Producto" required>
+        <input type="number" id="productPrice" placeholder="Precio" required>
+        <input type="number" id="productStock" placeholder="Stock" required>
+        <button onclick="addProduct()">Agregar</button>
+    </div>
+    
+    <h2>Lista de Productos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="productTableBody">
+            <!-- Productos serán añadidos aquí -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
